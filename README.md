@@ -33,20 +33,9 @@
 3.  **Настройте Firebase:**
     -   Перейдите в [консоль Firebase](https://console.firebase.google.com/) и создайте новый проект.
     -   Добавьте веб-приложение в свой проект Firebase.
-    -   Скопируйте конфигурацию Firebase и вставьте ее в файл `src/main.tsx`. Замените существующий объект `initializeApp` вашими учетными данными.
-    ```javascript
-    const app: FirebaseApp = initializeApp({
-        apiKey: "YOUR_API_KEY",
-        authDomain: "YOUR_AUTH_DOMAIN",
-        projectId: "YOUR_PROJECT_ID",
-        storageBucket: "YOUR_STORAGE_BUCKET",
-        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-        appId: "YOUR_APP_ID",
-        measurementId: "YOUR_MEASUREMENT_ID"
-    });
-    ```
+    -   Скопируйте конфигурацию Firebase и измените данные в .env файле в корневой папке.
     -   В настройках проекта Firebase включите аутентификацию Google (Authentication -> Sign-in method).
-    -   Настройте правила Firestore, чтобы разрешить чтение и запись только аутентифицированным пользователям.
+    -   Настройте правила Firestore, добавьте messages с полями как в интерфейсе IMessage.
 
 ## Использование
 
