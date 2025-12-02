@@ -8,13 +8,13 @@ import { createContext } from "react";
 import { getFirestore, type Firestore } from "firebase/firestore";
 
 const app: FirebaseApp = initializeApp({
-    apiKey: "AIzaSyCVe4DDkzRbhtSPyU-CNDo6YRrXcEf3pWY",
-    authDomain: "test-6acdd.firebaseapp.com",
-    projectId: "test-6acdd",
-    storageBucket: "test-6acdd.firebasestorage.app",
-    messagingSenderId: "58369436548",
-    appId: "1:58369436548:web:3f2298342637c3b8214bd1",
-    measurementId: "G-S9H5098XGJ",
+    apiKey: import.meta.env.VITE_API_KEY,
+    authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_APP_ID,
+    measurementId: import.meta.env.VITE_MEASUREMENT_ID,
 });
 export const auth: Auth = getAuth(app);
 export const db: Firestore = getFirestore(app);
